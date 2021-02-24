@@ -1,0 +1,14 @@
+use_frameworks!
+
+platform :ios, '9.0'
+
+target 'ParallaxScrollView_Example' do
+  pod 'ParallaxScrollView', :path => '../'
+
+  target 'ParallaxScrollView_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 2.2.0'
+    pod 'Nimble', '~> 8.0.7'
+  end
+end
