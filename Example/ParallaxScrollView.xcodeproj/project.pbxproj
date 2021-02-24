@@ -15,6 +15,8 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9738C29D1AA7C557AA28CB06 /* Pods_ParallaxScrollView_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0A5CFDF3B568355273CAF1C /* Pods_ParallaxScrollView_Tests.framework */; };
 		A5F65885F28D628E843A652B /* Pods_ParallaxScrollView_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AE2EE40881207129A1A3A2EA /* Pods_ParallaxScrollView_Example.framework */; };
+		E0618ADF25E68B4000F0034A /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0618ADE25E68B4000F0034A /* TestView.swift */; };
+		E0618AE325E68C7800F0034A /* StringButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0618AE225E68C7800F0034A /* StringButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,7 +31,7 @@
 
 /* Begin PBXFileReference section */
 		1075FF41935FB2B7D5390FA9 /* Pods-ParallaxScrollView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxScrollView_Tests.debug.xcconfig"; path = "Target Support Files/Pods-ParallaxScrollView_Tests/Pods-ParallaxScrollView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		289ED18F2B6FE2694D7288AF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		289ED18F2B6FE2694D7288AF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ParallaxScrollView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ParallaxScrollView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -40,13 +42,15 @@
 		607FACE51AFB9204008FA782 /* ParallaxScrollView_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParallaxScrollView_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
-		706FCB628A619D515DBC4BED /* ParallaxScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = ParallaxScrollView.podspec; path = ../ParallaxScrollView.podspec; sourceTree = "<group>"; };
+		706FCB628A619D515DBC4BED /* ParallaxScrollView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = ParallaxScrollView.podspec; path = ../ParallaxScrollView.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		83F089D5EF4AD7E8CECCD036 /* Pods-ParallaxScrollView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxScrollView_Tests.release.xcconfig"; path = "Target Support Files/Pods-ParallaxScrollView_Tests/Pods-ParallaxScrollView_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		91313ED5B70BB28297423C7F /* Pods-ParallaxScrollView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxScrollView_Example.debug.xcconfig"; path = "Target Support Files/Pods-ParallaxScrollView_Example/Pods-ParallaxScrollView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		AE2EE40881207129A1A3A2EA /* Pods_ParallaxScrollView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParallaxScrollView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A5CFDF3B568355273CAF1C /* Pods_ParallaxScrollView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ParallaxScrollView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D65B342F2AD6D2CEA39E4E8E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D65B342F2AD6D2CEA39E4E8E /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		DDCBE764492C357D2183B44E /* Pods-ParallaxScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ParallaxScrollView_Example.release.xcconfig"; path = "Target Support Files/Pods-ParallaxScrollView_Example/Pods-ParallaxScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
+		E0618ADE25E68B4000F0034A /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		E0618AE225E68C7800F0034A /* StringButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				E0618ADE25E68B4000F0034A /* TestView.swift */,
+				E0618AE225E68C7800F0034A /* StringButton.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -156,7 +162,6 @@
 				1075FF41935FB2B7D5390FA9 /* Pods-ParallaxScrollView_Tests.debug.xcconfig */,
 				83F089D5EF4AD7E8CECCD036 /* Pods-ParallaxScrollView_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -218,7 +223,7 @@
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
+						LastSwiftMigration = 1240;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -228,6 +233,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -352,6 +358,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0618AE325E68C7800F0034A /* StringButton.swift in Sources */,
+				E0618ADF25E68B4000F0034A /* TestView.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
@@ -440,7 +448,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -486,7 +494,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -505,7 +513,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -520,7 +528,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -541,7 +549,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParallaxScrollView_Example.app/ParallaxScrollView_Example";
 			};
 			name = Debug;
@@ -559,7 +567,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ParallaxScrollView_Example.app/ParallaxScrollView_Example";
 			};
 			name = Release;

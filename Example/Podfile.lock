@@ -1,0 +1,27 @@
+PODS:
+  - Nimble (8.0.9)
+  - ParallaxScrollView (0.1.0)
+  - Quick (2.2.1)
+
+DEPENDENCIES:
+  - Nimble (~> 8.0.7)
+  - ParallaxScrollView (from `../`)
+  - Quick (~> 2.2.0)
+
+SPEC REPOS:
+  trunk:
+    - Nimble
+    - Quick
+
+EXTERNAL SOURCES:
+  ParallaxScrollView:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Nimble: 98b888285a615fd34f20e61753cf58ea1402bde4
+  ParallaxScrollView: 6f8452bab2049f53560dce5550d0f2a7e8644181
+  Quick: f5754d69b7013f5864c29aab9ae6f0c79c5bc200
+
+PODFILE CHECKSUM: 6165a4afdc90e3f9266072c20ff8d7439d75463d
+
+COCOAPODS: 1.10.0
