@@ -14,37 +14,31 @@ final class RowItemView: UIView {
     private var maxHeight: CGFloat = 0
     private var width: CGFloat = 0
     
-    private let itemInset: UIEdgeInsets
+    private let horizontalSpacing: CGFloat
     
-    init(itemInset: UIEdgeInsets, items: [UIView]) {
+    init(items: [UIView], horizontalSpacing: CGFloat) {
         self.items = items
-        self.itemInset = itemInset
+        self.horizontalSpacing = horizontalSpacing
         
         super.init(frame: .zero)
         
         translatesAutoresizingMaskIntoConstraints = false
         
         items.forEach { view in
-            let margin: CGFloat
-            let anchor: NSLayoutXAxisAnchor
-            if let last = subviews.last {
-                margin = 10
-                anchor = last.rightAnchor
-            } else {
-                margin = itemInset.left
-                anchor = leftAnchor
-            }
+            let top = topAnchor
+            let left = subviews.last?.rightAnchor ?? leftAnchor
             
             addSubview(view)
             
             NSLayoutConstraint.activate([
-                view.topAnchor.constraint(equalTo: topAnchor, constant: itemInset.top),
-                view.leftAnchor.constraint(equalTo: anchor, constant: itemInset.left)
+                view.topAnchor.constraint(equalTo: top),
+                view.leftAnchor.constraint(equalTo: left, constant: horizontalSpacing)
             ])
             
             let size = view.intrinsicContentSize
+            
             maxHeight = max(maxHeight, size.height)
-            width += (size.width + margin)
+            width += (size.width + horizontalSpacing)
         }
     }
     
@@ -53,8 +47,7 @@ final class RowItemView: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        return CGSize(width: width + itemInset.right,
-                      height: itemInset.top + maxHeight + itemInset.bottom)
+        CGSize(width: width + horizontalSpacing + horizontalSpacing, height: maxHeight)
     }
 }
 

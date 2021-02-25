@@ -9,7 +9,6 @@ import Foundation
 
 final class ScrollView: UIScrollView {
     var spacing: CGFloat = 5
-    
     var views: [UIView] = [] {
         didSet { createView(views) }
     }
