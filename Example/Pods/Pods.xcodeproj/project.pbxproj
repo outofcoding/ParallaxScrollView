@@ -99,6 +99,8 @@
 		C051C0411627BD5FCDA031782EB1F716 /* DSL.h in Headers */ = {isa = PBXBuildFile; fileRef = DD94E448E7BD07EB326E452082EEC7E1 /* DSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C0953BFAF6C2AC029CF2430335651725 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8B94E9D3B433157168D1EECCEC11CD /* Foundation.framework */; };
 		C0C98C8C7D07E1598F20EE2F0539197D /* NMBExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46148431FD0ED2A2565F0AEA34C343D0 /* NMBExpectation.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		C252DDC325E74CB100527880 /* RowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252DDC225E74CB100527880 /* RowItemView.swift */; };
+		C252DDCF25E76E2C00527880 /* ParallaxItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C252DDCE25E76E2C00527880 /* ParallaxItemView.swift */; };
 		C903AEFEEB4E73644A03FB8285543107 /* BeEmpty.swift in Sources */ = {isa = PBXBuildFile; fileRef = B50EFFB0F1B4F7596CD02E28BA0B59B8 /* BeEmpty.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C979EEB0159A65246F6BD2C906A8ADB7 /* BeVoid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726D96C5E3FE9C70B85B8000AC8AEF9F /* BeVoid.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		C99BBC3F70E056CB6A3CC0516318939D /* AssertionDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22ABEEDFE785CFD93BACDA971926BF41 /* AssertionDispatcher.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
@@ -275,6 +277,8 @@
 		BAE263041362D074978BB3B577DF0A05 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD1BF7A6A240D39BCDD16B3A9B1C3D27 /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Sources/Nimble/Utils/Functional.swift; sourceTree = "<group>"; };
 		C0141526DC69D1961DD345A499664266 /* Quick-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Quick-prefix.pch"; sourceTree = "<group>"; };
+		C252DDC225E74CB100527880 /* RowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowItemView.swift; sourceTree = "<group>"; };
+		C252DDCE25E76E2C00527880 /* ParallaxItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ParallaxItemView.swift; path = ParallaxScrollView/Classes/ParallaxItemView.swift; sourceTree = "<group>"; };
 		C67BBBBC8392BA7326C5A3E09091744D /* DSL.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DSL.m; path = Sources/NimbleObjectiveC/DSL.m; sourceTree = "<group>"; };
 		C95E7EF87CCD6CA922FCAAFA45018870 /* Nimble.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Nimble.modulemap; sourceTree = "<group>"; };
 		C9DB303F07D27158CB8EC0B8E56B7642 /* QuickSpec.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QuickSpec.m; path = Sources/QuickObjectiveC/QuickSpec.m; sourceTree = "<group>"; };
@@ -511,6 +515,8 @@
 			isa = PBXGroup;
 			children = (
 				E0618AC425E6853500F0034A /* ParallaxScrollView.swift */,
+				C252DDCE25E76E2C00527880 /* ParallaxItemView.swift */,
+				C252DDC225E74CB100527880 /* RowItemView.swift */,
 				E0618ACB25E6857F00F0034A /* ScrollView.swift */,
 				E0618AD725E6860700F0034A /* ScrollViewDelegate.swift */,
 				2797213F99D4D8945D120FF586E4879F /* Pod */,
@@ -927,6 +933,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0618AC525E6853500F0034A /* ParallaxScrollView.swift in Sources */,
+				C252DDC325E74CB100527880 /* RowItemView.swift in Sources */,
+				C252DDCF25E76E2C00527880 /* ParallaxItemView.swift in Sources */,
 				E0618AD825E6860700F0034A /* ScrollViewDelegate.swift in Sources */,
 				E0618ACC25E6857F00F0034A /* ScrollView.swift in Sources */,
 				B174F76C41A17BE387D2E77E9B35873B /* ParallaxScrollView-dummy.m in Sources */,

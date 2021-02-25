@@ -9,6 +9,7 @@ import Foundation
 
 final class ScrollView: UIScrollView {
     var spacing: CGFloat = 5
+    
     var views: [UIView] = [] {
         didSet { createView(views) }
     }
@@ -53,6 +54,11 @@ final class ScrollView: UIScrollView {
         }
         
         return CGSize(width: superViewSize.width, height: height)
+    }
+    
+    func clear() {
+        self.views.removeAll()
+        self.subviews.forEach{ $0.removeFromSuperview() }
     }
 }
 
