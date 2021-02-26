@@ -8,14 +8,17 @@
 import UIKit
 
 public protocol ParallaxItemViewDelegate: class {
-    func layoutOptions(with parallaxItemView: ParallaxItemView) -> ParallaxItemView.LayoutOptions?
+    func numberOfItems(with parallaxItemView: ParallaxItemView) -> Int
     
     func parallaxScrollView(_ parallaxItemView: ParallaxItemView, cellForItemAt index: Int) -> UIView
     
-    func numberOfItems(with parallaxItemView: ParallaxItemView) -> Int
+    func parallaxScrollView(with parallaxItemView: ParallaxItemView, didSelectAt index: Int)
+    
+    func layoutOptions(with parallaxItemView: ParallaxItemView) -> ParallaxItemView.LayoutOptions?
 }
 
 extension ParallaxItemViewDelegate {
+    public func parallaxScrollView(with parallaxItemView: ParallaxItemView, didSelectAt index: Int) { }
     public func layoutOptions(with parallaxItemView: ParallaxItemView) -> ParallaxItemView.LayoutOptions? { nil }
 }
 
@@ -45,14 +48,22 @@ public final class ParallaxItemView: UIView {
     
     private var rowWidths = [CGFloat]()
     private var rowViews = [[UIView]]()
+
+    private var views = [UIView?]()
+    private var gestures = [ParallexTapGestureRecognizer]()
     
     public override var intrinsicContentSize: CGSize { return scrollView.intrinsicContentSize }
+    
+    @objc func didSelectItems(with tapGesture: ParallexTapGestureRecognizer) {
+        self.delegate?.parallaxScrollView(with: self, didSelectAt: tapGesture.index)
+    }
 }
 
 extension ParallaxItemView {
     public func reloadData() {
-        self.scrollView.clear()
-        guard let count = delegate?.numberOfItems(with: self) else { return }
+        self.clear()
+        
+        guard let count = delegate?.numberOfItems(with: self), count > 0 else { return }
         
         layoutOptions = delegate?.layoutOptions(with: self) ?? LayoutOptions(spacing: Spacing())
         
@@ -61,8 +72,16 @@ extension ParallaxItemView {
         self.rowWidths.append(contentsOf: Array(repeating: 0.0, count: rowCount))
         self.rowViews.append(contentsOf: Array(repeating: [UIView](), count: rowCount))
         
+        self.gestures.append(contentsOf: Array(0..<count).map{ ParallexTapGestureRecognizer(target: self, action: #selector(didSelectItems(with:)), index: $0) })
+        
         (0..<count).forEach { index in
-            guard let view = self.delegate?.parallaxScrollView(self, cellForItemAt: index) else { return }
+            let item = self.delegate?.parallaxScrollView(self, cellForItemAt: index)
+                
+            views.append(item)
+            
+            guard let view = item else { return }
+            
+            view.addGestureRecognizer(self.gestures[index])
             
             let rowIndex = pickRow(itemIndex: index)
             
@@ -73,13 +92,24 @@ extension ParallaxItemView {
         }
         
         self.scrollView.views = self.rowViews.compactMap{ RowItemView(items: $0, horizontalSpacing: layoutOptions.spacing.horizontal) }
-        
-        self.rowViews.removeAll()
-        self.rowWidths.removeAll()
+    }
+    
+    public func getItems(with index: Int) -> UIView? {
+        guard index < self.views.count else { return nil }
+        return self.views[index]
     }
 }
 
 extension ParallaxItemView {
+    
+    private func clear() {
+        self.rowViews.removeAll()
+        self.rowWidths.removeAll()
+        self.gestures.removeAll()
+        self.views.removeAll()
+        self.scrollView.clear()
+    }
+    
     private func loadView() {
         translatesAutoresizingMaskIntoConstraints = false
         

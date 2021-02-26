@@ -15,6 +15,7 @@
 		13D2A4D59DD9612E1AA7F3182A342162 /* mach_excServer.c in Sources */ = {isa = PBXBuildFile; fileRef = 954F6BC7A562658C4FAC057034F6DF28 /* mach_excServer.c */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
 		14ECE81218F5F5C9BEF00819A7C078EC /* Closures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523F4123831772C0FEEBA7A82BBA31B6 /* Closures.swift */; };
 		192A3F8BEC1A99FD8712D3E09724D72C /* FailureMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA47ACC5B8D31AD74D5BDD185A24EB83 /* FailureMessage.swift */; settings = {COMPILER_FLAGS = "-DPRODUCT_NAME=Nimble/Nimble"; }; };
+		1997179D25E8C20700689EE6 /* ParallexTapGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1997179C25E8C20700689EE6 /* ParallexTapGestureRecognizer.swift */; };
 		1A8DF79F5EF3D69864A84173E7C9810E /* QCKDSL.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AB5021AED5A79789DB0F55EBB7D8BF9 /* QCKDSL.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		209F98BB7B328893FB64BA0393B4BD57 /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F174D27705CD0D5B6F171827327860 /* HooksPhase.swift */; };
 		22AA362CEDF0E20AFE2D936FCE835D1C /* Pods-ParallaxScrollView_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E38251B1954344C1FF384DF03BFC37 /* Pods-ParallaxScrollView_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -176,6 +177,7 @@
 		1347A8927FE8629A24AC84C33B1E5227 /* Pods-ParallaxScrollView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ParallaxScrollView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		14815E9DBB9751E5CE3CA6C0258BCD75 /* CwlCatchBadInstruction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CwlCatchBadInstruction.swift; path = Carthage/Checkouts/CwlPreconditionTesting/Sources/CwlPreconditionTesting/CwlCatchBadInstruction.swift; sourceTree = "<group>"; };
 		1806132AB751DBCAEF39424E99FF7E48 /* QuickConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickConfiguration.swift; path = Sources/Quick/Configuration/QuickConfiguration.swift; sourceTree = "<group>"; };
+		1997179C25E8C20700689EE6 /* ParallexTapGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParallexTapGestureRecognizer.swift; path = ParallaxScrollView/Classes/ParallexTapGestureRecognizer.swift; sourceTree = "<group>"; };
 		1A4C13D3E16F5CC104B4F9E6E0509CE1 /* SuiteHooks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SuiteHooks.swift; path = Sources/Quick/Hooks/SuiteHooks.swift; sourceTree = "<group>"; };
 		1B5DE0BACD9C50DBF2BF9B7132E00C2C /* Quick.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Quick.modulemap; sourceTree = "<group>"; };
 		1DB1CB92EE7BAAD3F0A4E9028FC41E19 /* MatchError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MatchError.swift; path = Sources/Nimble/Matchers/MatchError.swift; sourceTree = "<group>"; };
@@ -516,6 +518,7 @@
 			children = (
 				E0618AC425E6853500F0034A /* ParallaxScrollView.swift */,
 				C252DDCE25E76E2C00527880 /* ParallaxItemView.swift */,
+				1997179C25E8C20700689EE6 /* ParallexTapGestureRecognizer.swift */,
 				C252DDF925E7803B00527880 /* RowItemView.swift */,
 				E0618ACB25E6857F00F0034A /* ScrollView.swift */,
 				E0618AD725E6860700F0034A /* ScrollViewDelegate.swift */,
@@ -934,6 +937,7 @@
 			files = (
 				E0618AC525E6853500F0034A /* ParallaxScrollView.swift in Sources */,
 				C252DDCF25E76E2C00527880 /* ParallaxItemView.swift in Sources */,
+				1997179D25E8C20700689EE6 /* ParallexTapGestureRecognizer.swift in Sources */,
 				E0618AD825E6860700F0034A /* ScrollViewDelegate.swift in Sources */,
 				E0618ACC25E6857F00F0034A /* ScrollView.swift in Sources */,
 				C252DDFA25E7803B00527880 /* RowItemView.swift in Sources */,

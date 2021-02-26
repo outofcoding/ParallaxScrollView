@@ -12,7 +12,7 @@ final class RowItemView: UIView {
     private let items: [UIView]
     
     private var maxHeight: CGFloat = 0
-    private var width: CGFloat = 0
+    private var _width: CGFloat = 0
     
     private let horizontalSpacing: CGFloat
     
@@ -24,21 +24,27 @@ final class RowItemView: UIView {
         
         translatesAutoresizingMaskIntoConstraints = false
         
-        items.forEach { view in
+        items.enumerated().forEach { (index, view) in
             let top = topAnchor
             let left = subviews.last?.rightAnchor ?? leftAnchor
             
+            let size = view.intrinsicContentSize
+            
+            let spacing = (index > 0 ? horizontalSpacing : 0)
+            
+            view.frame = .init(x: _width + spacing,
+                               y: 0,
+                               width: size.width,
+                               height: size.height)
             addSubview(view)
             
             NSLayoutConstraint.activate([
                 view.topAnchor.constraint(equalTo: top),
-                view.leftAnchor.constraint(equalTo: left, constant: horizontalSpacing)
+                view.leftAnchor.constraint(equalTo: left, constant: spacing),
             ])
             
-            let size = view.intrinsicContentSize
-            
             maxHeight = max(maxHeight, size.height)
-            width += (size.width + horizontalSpacing)
+            _width += (size.width + horizontalSpacing)
         }
     }
     
@@ -47,8 +53,7 @@ final class RowItemView: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        CGSize(width: width + horizontalSpacing + horizontalSpacing, height: maxHeight)
+        CGSize(width: _width + horizontalSpacing + horizontalSpacing, height: maxHeight)
     }
 }
-
 
