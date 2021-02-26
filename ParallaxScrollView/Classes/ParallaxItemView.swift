@@ -94,7 +94,7 @@ extension ParallaxItemView {
         self.scrollView.views = self.rowViews.compactMap{ RowItemView(items: $0, horizontalSpacing: layoutOptions.spacing.horizontal) }
     }
     
-    public func getItems(with index: Int) -> UIView? {
+    public func itemFor(with index: Int) -> UIView? {
         guard index < self.views.count else { return nil }
         return self.views[index]
     }
