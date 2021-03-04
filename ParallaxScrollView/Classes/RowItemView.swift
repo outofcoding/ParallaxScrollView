@@ -14,11 +14,11 @@ final class RowItemView: UIView {
     private var maxHeight: CGFloat = 0
     private var _width: CGFloat = 0
     
-    private let horizontalSpacing: CGFloat
+    private let spacing: ParallaxItemView.Spacing
     
-    init(items: [UIView], horizontalSpacing: CGFloat) {
+    init(items: [UIView], spacing: ParallaxItemView.Spacing) {
         self.items = items
-        self.horizontalSpacing = horizontalSpacing
+        self.spacing = spacing
         
         super.init(frame: .zero)
         
@@ -30,9 +30,11 @@ final class RowItemView: UIView {
             
             let size = view.intrinsicContentSize
             
-            let spacing = (index > 0 ? horizontalSpacing : 0)
+            let spacing = (index > 0 ? self.spacing.horizontal : 0)
+            let leftMargin = (index == 0 ? self.spacing.leftMargin : 0.0)
+            let rightMargin = (index + 1 == items.count ? self.spacing.rightMargin : 0.0)
             
-            view.frame = .init(x: _width + spacing,
+            view.frame = .init(x: _width + leftMargin + spacing,
                                y: 0,
                                width: size.width,
                                height: size.height)
@@ -40,11 +42,11 @@ final class RowItemView: UIView {
             
             NSLayoutConstraint.activate([
                 view.topAnchor.constraint(equalTo: top),
-                view.leftAnchor.constraint(equalTo: left, constant: spacing),
+                view.leftAnchor.constraint(equalTo: left, constant: leftMargin + spacing),
             ])
             
             maxHeight = max(maxHeight, size.height)
-            _width += (size.width + horizontalSpacing)
+            _width += (size.width + leftMargin + spacing + rightMargin)
         }
     }
     
@@ -53,7 +55,6 @@ final class RowItemView: UIView {
     }
     
     override var intrinsicContentSize: CGSize {
-        CGSize(width: _width + horizontalSpacing + horizontalSpacing, height: maxHeight)
+        CGSize(width: _width, height: maxHeight)
     }
 }
-

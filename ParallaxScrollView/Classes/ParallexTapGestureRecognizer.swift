@@ -7,12 +7,14 @@
 
 import UIKit
 
-internal class ParallexTapGestureRecognizer: UITapGestureRecognizer {
+class ParallexTapGestureRecognizer: UITapGestureRecognizer {
     let index: Int
     
     init(target: Any?, action: Selector?, index: Int) {
         self.index = index
         
         super.init(target: target, action: action)
+        
+        cancelsTouchesInView = false
     }
 }

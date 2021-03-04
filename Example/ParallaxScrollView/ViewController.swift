@@ -63,8 +63,8 @@ class ViewController: UIViewController {
 extension ViewController: ParallaxItemViewDelegate {
     func numberOfItems(with parallaxItemView: ParallaxItemView) -> Int { self.items.count }
     
-    func parallaxScrollView(_ parallaxItemView: ParallaxItemView, cellForItemAt index: Int) -> UIView {
-        let value = self.items[index]
+    func parallaxScrollView(_ parallaxItemView: ParallaxItemView, viewForItemAt index: Int) -> UIView {
+        let value = items[index]
         
         let button = StringButton()
         button.translatesAutoresizingMaskIntoConstraints = false
