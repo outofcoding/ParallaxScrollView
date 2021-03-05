@@ -54,6 +54,11 @@ final class ScrollView: UIScrollView {
         
         return CGSize(width: superViewSize.width, height: height)
     }
+    
+    func clear() {
+        self.views.removeAll()
+        self.subviews.forEach{ $0.removeFromSuperview() }
+    }
 }
 
 private extension ScrollView {
