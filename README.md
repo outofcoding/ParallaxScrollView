@@ -24,12 +24,19 @@ ParallaxScrollView is available through [CocoaPods](https://cocoapods.org). To i
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ParallaxScrollView'
+# Podfile
+use_frameworks!
+
+target 'YOUR_TARGET_NAME' do
+  pod 'ParallaxScrollView', '1.0.1'
+end
+
 ```
 
 ## Author
 
-outofcoding, outofcoding@gmail.com
+outofcoding, outofcoding@gmail.com  
+damon.p, damon.p@kg.xyz
 
 ## License
 
