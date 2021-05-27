@@ -146,22 +146,44 @@ extension ParallaxItemView {
 
 extension ParallaxItemView {
     public struct LayoutOptions {
-        public var spacing: Spacing = Spacing()
-        public var contentInset: UIEdgeInsets = .zero
-        public var maxRowCount: Int = 3
-        public var preferColumnCount: Int = 8
+        public let spacing: Spacing
+        public let contentInset: UIEdgeInsets
+        public let maxRowCount: Int
+        public let preferColumnCount: Int
         
         func rowCount(with itemCount: Int) -> Int {
             let overCount = (itemCount % preferColumnCount == 0 ? 0 : 1)
             
             return min(Int(itemCount / preferColumnCount) + overCount, maxRowCount)
         }
+        
+        public init(spacing: Spacing = Spacing(),
+                    contentInset: UIEdgeInsets = .zero,
+                    maxRowCount: Int = 3,
+                    preferColumnCount: Int = 8) {
+            self.spacing = spacing
+            self.contentInset = contentInset
+            self.maxRowCount = maxRowCount
+            self.preferColumnCount = preferColumnCount
+        }
     }
     
     public struct Spacing {
-        var vertical: CGFloat = 5
-        var horizontal: CGFloat = 5
-        var leftMargin: CGFloat = 16
-        var rightMargin: CGFloat = 16
+        let vertical: CGFloat
+        let horizontal: CGFloat
+        let leftMargin: CGFloat
+        let rightMargin: CGFloat
+        
+        public init(
+            vertical: CGFloat = 5,
+            horizontal: CGFloat = 5,
+            leftMargin: CGFloat = 16,
+            rightMargin: CGFloat = 16
+        ) {
+            self.vertical = vertical
+            self.horizontal = horizontal
+            self.leftMargin = leftMargin
+            self.rightMargin = rightMargin
+        }
     }
 }
