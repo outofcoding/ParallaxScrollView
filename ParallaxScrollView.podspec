@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ParallaxScrollView'
-  s.version          = '1.0.1'
+  s.version          = '1.0.2'
   s.summary          = 'Scroll Item is parallax'
   s.description      = <<-DESC
 This lib is like ClubHouse View.
