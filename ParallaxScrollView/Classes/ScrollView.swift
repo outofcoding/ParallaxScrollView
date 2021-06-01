@@ -90,7 +90,7 @@ private extension ScrollView {
                 #endif
             }
             
-            maxWidth = max(maxWidth, view.intrinsicContentSize.width)
+            maxWidth = max(maxWidth, viewSize(with: view))
         }
     }
     
@@ -99,10 +99,13 @@ private extension ScrollView {
         let maxScroll = maxWidth - scrollWidth
         
         let anchorCount = leftAnchors.count
+        if anchorCount == 0 { return }
+        
         for (index, view) in subviews.enumerated() {
-            guard (0...anchorCount).contains(index) else { break }
+            guard (0..<anchorCount).contains(index) else { break }
             
-            let viewWidth = view.intrinsicContentSize.width
+            let viewWidth = viewSize(with: view)
+            
             let anchor = leftAnchors[index]
             
             if viewWidth == maxWidth {
@@ -115,6 +118,15 @@ private extension ScrollView {
                     anchor.constant = constant
                 }
             }
+        }
+    }
+    
+    func viewSize(with view: UIView) -> CGFloat {
+        let viewWidth = view.intrinsicContentSize.width
+        if viewWidth > -1 {
+            return viewWidth
+        } else {
+            return view.frame.size.width
         }
     }
 }
